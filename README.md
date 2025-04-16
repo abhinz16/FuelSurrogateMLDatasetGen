@@ -42,7 +42,7 @@ Fuel Surrogate Machine Learning Dataset Generator is a Python package that runs 
 git clone https://github.com/abhinz16/FuelSurrogateMLDatasetGen.git
 cd FuelSurrogateMLDatasetGen
 ```
-- Install the required dependencies (see Requirements.txt).
+- Install the required dependencies (see requirements.txt).
 
 ---
 
