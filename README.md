@@ -9,7 +9,6 @@ Table of Contents
 5) Dependencies
 
 1) Process Flow
-
 a) Check libraries and the folders available.
 b) Perform fragmentation of palette components to get FG counts.
 c) Generate surrogate mixtures.
