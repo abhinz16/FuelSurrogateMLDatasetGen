@@ -45,7 +45,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Provide the location to store the data...
-folderpath = "/home/abhi/Documents/F24"
+folderpath = ""
 sys.path.append(folderpath)
 
 if __name__=="__main__":
