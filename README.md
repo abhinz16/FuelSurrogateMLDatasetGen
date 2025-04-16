@@ -1,43 +1,31 @@
-Fuel Surrogate Machine Learning Dataset Generator
+# Fuel Surrogate Machine Learning Dataset Generator
 
 A package for generating fuel surrogate datasets diverse in UNIFAC functional group compositions for training machine learning models for predicting physicochemical properties.
-Table of Contents
 
-    Process Flow
+---
 
-    Installation
+## Table of Contents
+1. [Process Flow](#1-process-flow)  
+2. [Installation](#2-installation)  
+3. [Usage](#3-usage)  
+4. [License](#4-license)  
+5. [Dependencies](#5-dependencies)
 
-    Usage
+---
+## 1) Process Flow
 
-    License
-
-    Dependencies
-
-1) Process Flow
-
-    Check libraries and the folders available.
-
-    Perform fragmentation of palette components to get FG counts.
-
-    Generate surrogate mixtures.
-
-    Post-process the generated mixtures to ensure correct mixture IDs.
-
-    Remove temporarily created files.
-
-    Generate a CSV file combining the FGs of mixtures for statistical analysis later.
-
-    Create FG distribution plots.
-
-    Correlation and entropy analysis → how do the metrics change with the number of components and number of mixtures?
-
-    Monte-Carlo analysis (irrespective of number of components) → how do correlation and entropy vary with number of mixtures?
-
-    Find the minimum number of mixtures for an optimal dataset (threshold provided by the user as input at this step).
-
-    Generate optimal dataset for the minimum number of mixtures identified using Monte-Carlo analysis.
-
-    Finally, create the necessary files and figures.
+- Check libraries and the folders available.
+- Perform fragmentation of palette components to get FG counts.
+- Generate surrogate mixtures.
+- Post-process the generated mixtures to ensure correct mixture IDs.
+- Remove temporarily created files.
+- Generate a CSV file combining the FGs of mixtures for statistical analysis later.
+- Create FG distribution plots.
+- Correlation and entropy analysis → how do the metrics change with the number of components and number of mixtures?
+- Monte-Carlo analysis (irrespective of number of components) → how do correlation and entropy vary with number of mixtures?
+- Find the minimum number of mixtures for an optimal dataset (threshold provided by the user as input at this step).
+- Generate optimal dataset for the minimum number of mixtures identified using Monte-Carlo analysis.
+- Finally, create the necessary files and figures.
 
 2) Installation
 
