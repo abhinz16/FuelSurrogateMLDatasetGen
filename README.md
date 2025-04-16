@@ -2,71 +2,82 @@ Fuel Surrogate Machine Learning Dataset Generator
 
 A package for generating fuel surrogate datasets diverse in UNIFAC functional group compositions for training machine learning models for predicting physicochemical properties.
 Table of Contents
-Process Flow
-Installation
-Usage
-License
-Dependencies
+
+    Process Flow
+
+    Installation
+
+    Usage
+
+    License
+
+    Dependencies
 
 1) Process Flow
 
-a) Check libraries and the folders available.
+    Check libraries and the folders available.
 
-b) Perform fragmentation of palette components to get FG counts.
+    Perform fragmentation of palette components to get FG counts.
 
-c) Generate surrogate mixtures.
+    Generate surrogate mixtures.
 
-d) Post processing of the generated mixtures to ensure correct mixture ids.
+    Post-process the generated mixtures to ensure correct mixture IDs.
 
-e) Remove temporarily created files.
+    Remove temporarily created files.
 
-f) Generating a csv file combining the FGs of mixtures for statistical analysis later.
+    Generate a CSV file combining the FGs of mixtures for statistical analysis later.
 
-g) Create FG distribution plots.
+    Create FG distribution plots.
 
-h) Correlation and entropy analysis → how does the metrics change with the number of components and number of mixtures.
+    Correlation and entropy analysis → how do the metrics change with the number of components and number of mixtures?
 
-i) Monte-Carlo analysis (irrespective of number of components) → how does correlation and entropy vary with number of mixtures.
+    Monte-Carlo analysis (irrespective of number of components) → how do correlation and entropy vary with number of mixtures?
 
-j) Find the minimum number of mixtures for an optimal dataset. Threshold provided by the user as an input at this step.
+    Find the minimum number of mixtures for an optimal dataset (threshold provided by the user as input at this step).
 
-k) Generate optimal dataset for the minimum number of mixtures identified using Monte-Carlo analysis.
+    Generate optimal dataset for the minimum number of mixtures identified using Monte-Carlo analysis.
 
-l) Finally, create the necessary files and figures.
+    Finally, create the necessary files and figures.
 
 2) Installation
 
-Fuel Surrogate Machine Learning Dataset Generator is a Python package that runs on any platform with the proper dependencies. Follow these steps to set it up:
+Fuel Surrogate Machine Learning Dataset Generator is a Python package that runs on any platform with the proper dependencies.
 Running the Python Source (All Platforms)
 
-    Ensure you have Python 3.10.13+ versions installed on your system/environment (Windows, macOS, Linux).
+    Ensure you have Python 3.10.13+ installed on your system/environment (Windows, macOS, Linux).
 
     Clone this repository:
 
 git clone https://github.com/abhinz16/FuelSurrogateMLDatasetGen.git
 cd FuelSurrogateMLDatasetGen
 
-Install the required dependencies (see Requirements.txt in FuelSurrogateMLDatasetGen).
+Install the required dependencies:
+
+    pip install -r Requirements.txt
 
 3) Usage
 
-    Navigate to FuelSurrogateMLDatasetGen folder.
+    Navigate to the FuelSurrogateMLDatasetGen folder.
 
-    First, fill in the necessary details:
+    Fill in the necessary details:
 
-        Locate csv files: fuel_props.csv and components_with_smiles.csv
+        Locate the CSV files: fuel_props.csv and components_with_smiles.csv
 
-        Provide the UNIFAC functional group compositions of fuel in fuel_props.csv file. Do not name fuels with _ in them.
+        Provide the UNIFAC functional group compositions of fuels in fuel_props.csv
 
-        Replace the palette of components you would like to use in components_with_smiles.csv file.
+            ⚠️ Do not name fuels with underscores (_) in them.
 
-    Next, locate main.py and open it in a programming platform like Spyder.
+        Replace the palette of components you want to use in components_with_smiles.csv
 
-    Provide the filepath for FuelSurrogateMLDatasetGen folder. The generated outputs will be stored in this folder.
+    Open main.py in a programming platform like Spyder.
 
-    Run the code and associated files from a local drive. Try to avoid network drives and such.
+    Set the path to the FuelSurrogateMLDatasetGen folder. The outputs will be saved there.
 
-    The optimized diverse dataset can be found in a folder named Output with name Optimal_dataset_FG_fragmentations.csv.
+    Run the code from a local drive (avoid network drives for performance and file access reasons).
+
+    The optimized diverse dataset will be found in the Output folder as:
+
+    Optimal_dataset_FG_fragmentations.csv
 
 4) License
 
@@ -74,7 +85,7 @@ This project is licensed under the MIT License.
 Use, modify, and distribute it freely per the license terms.
 5) Dependencies
 
-    python <= 3.10.13 and is 3.x
+    python <= 3.10.13 and must be version 3.x
 
     pandas <= 1.5.3
 
@@ -83,4 +94,3 @@ Use, modify, and distribute it freely per the license terms.
     seaborn <= 0.13.2
 
     scipy <= 1.12.0
-
