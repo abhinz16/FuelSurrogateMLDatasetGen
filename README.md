@@ -2,16 +2,11 @@ Fuel Surrogate Machine Learning Dataset Generator
 
 A package for generating fuel surrogate datasets diverse in UNIFAC functional group compositions for training machine learning models for predicting physicochemical properties.
 Table of Contents
-
-    Process Flow
-
-    Installation
-
-    Usage
-
-    License
-
-    Dependencies
+1) Process Flow
+2) Installation
+3) Usage
+4) License
+5) Dependencies
 
 1) Process Flow
 
