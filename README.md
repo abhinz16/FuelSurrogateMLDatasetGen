@@ -48,46 +48,38 @@ cd FuelSurrogateMLDatasetGen
 
 ## 3) Usage
 
-    Navigate to the FuelSurrogateMLDatasetGen folder.
 
-    Fill in the necessary details:
+- Navigate to the `FuelSurrogateMLDatasetGen` folder.
 
-        Locate the CSV files: fuel_props.csv and components_with_smiles.csv
+- Fill in the necessary details:
+  - Locate the CSV files: `fuel_props.csv` and `components_with_smiles.csv`
+  - Provide the UNIFAC functional group compositions of fuels in `fuel_props.csv`  
+    ⚠️ Do not name fuels with underscores (`_`) in them.
+  - Replace the palette of components you want to use in `components_with_smiles.csv`
 
-        Provide the UNIFAC functional group compositions of fuels in fuel_props.csv
+- Open `main.py` in a programming platform like **Spyder**.
 
-            ⚠️ Do not name fuels with underscores (_) in them.
+- Set the path to the `FuelSurrogateMLDatasetGen` folder. The outputs will be saved there.
 
-        Replace the palette of components you want to use in components_with_smiles.csv
+- Run the code from a **local drive** (avoid network drives for performance and file access reasons).
 
-    Open main.py in a programming platform like Spyder.
-
-    Set the path to the FuelSurrogateMLDatasetGen folder. The outputs will be saved there.
-
-    Run the code from a local drive (avoid network drives for performance and file access reasons).
-
-    The optimized diverse dataset will be found in the Output folder as:
-
-    Optimal_dataset_FG_fragmentations.csv
+- The optimized diverse dataset will be found in the `Output` folder as: `Optimal_dataset_FG_fragmentations.csv`
 
 
 ---
 
+
 ## 4) License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.  
 Use, modify, and distribute it freely per the license terms.
 
 ---
 
 ## 5) Dependencies
 
-    python <= 3.10.13 and must be version 3.x
-
-    pandas <= 1.5.3
-
-    matplotlib <= 3.8.3
-
-    seaborn <= 0.13.2
-
-    scipy <= 1.12.0
+- `python <= 3.10.13` and must be version 3.x  
+- `pandas <= 1.5.3`  
+- `matplotlib <= 3.8.3`  
+- `seaborn <= 0.13.2`  
+- `scipy <= 1.12.0`
