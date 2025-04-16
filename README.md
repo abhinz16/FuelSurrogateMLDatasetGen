@@ -27,23 +27,26 @@ A package for generating fuel surrogate datasets diverse in UNIFAC functional gr
 - Generate optimal dataset for the minimum number of mixtures identified using Monte-Carlo analysis.
 - Finally, create the necessary files and figures.
 
-2) Installation
+
+---
+
+## 2) Installation
 
 Fuel Surrogate Machine Learning Dataset Generator is a Python package that runs on any platform with the proper dependencies.
-Running the Python Source (All Platforms)
 
-    Ensure you have Python 3.10.13+ installed on your system/environment (Windows, macOS, Linux).
+### Running the Python Source (All Platforms)
 
-    Clone this repository:
-
+- Ensure you have Python 3.10.13+ installed on your system/environment (Windows, macOS, Linux).
+- Clone this repository:
+```bash
 git clone https://github.com/abhinz16/FuelSurrogateMLDatasetGen.git
 cd FuelSurrogateMLDatasetGen
+```
+- Install the required dependencies (see Requirements.txt).
 
-Install the required dependencies:
+---
 
-    pip install -r Requirements.txt
-
-3) Usage
+## 3) Usage
 
     Navigate to the FuelSurrogateMLDatasetGen folder.
 
@@ -67,11 +70,17 @@ Install the required dependencies:
 
     Optimal_dataset_FG_fragmentations.csv
 
-4) License
+
+---
+
+## 4) License
 
 This project is licensed under the MIT License.
 Use, modify, and distribute it freely per the license terms.
-5) Dependencies
+
+---
+
+## 5) Dependencies
 
     python <= 3.10.13 and must be version 3.x
 
