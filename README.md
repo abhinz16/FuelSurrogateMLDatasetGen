@@ -55,7 +55,7 @@ cd FuelSurrogateMLDatasetGen
   - Locate the file: `config.py`
     - Fill in all the necessary details, especially the location to save the data (preferably the folder named `Dataset_generator`).
   - Locate the CSV files: `fuel_props.csv` and `components_with_smiles.csv`
-  - Provide the UNIFAC functional group compositions of fuels in `fuel_props.csv`. Make sure to add the fuel name as well. 
+  - Provide the UNIFAC functional group compositions of fuels in `fuel_props.csv`. Make sure to add the fuel name as well.  
     ⚠️ Do not name fuels with underscores (`_`) in them.
   - Replace the palette of components you want to use in `components_with_smiles.csv`
 
