@@ -61,8 +61,6 @@ cd FuelSurrogateMLDatasetGen
 
 - Open `main.py` in a programming platform like **Spyder**.
 
-- Set the path to the `FuelSurrogateMLDatasetGen` folder. The outputs will be saved there.
-
 - Run the code from a **local drive** (avoid network drives for performance and file access reasons).
 
 - The optimized diverse dataset will be found in the `Output` folder as: `Optimal_dataset_FG_fragmentations.csv`
