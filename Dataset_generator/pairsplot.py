@@ -78,7 +78,7 @@ def plot_pairplots(file_data, num_comp, filepath_to_fuel_properties, color_palet
     
     plt.get_current_fig_manager().window.showMaximized()
     plt.tight_layout()
-    plt.savefig(filepath_to_fuel_properties.parent.joinpath(f"Figures/{num_comp}_component_mixtures_pairplot.tif"), dpi=600)
+    plt.savefig(filepath_to_fuel_properties.parent.joinpath("Figures", f"{num_comp}_component_mixtures_pairplot.tif"), dpi=600)
     plt.close()
 
 def main(data, filepath_to_fuel_properties):
