@@ -315,22 +315,22 @@ def main(file_data, filepath_to_fuel_properties, fg_prop_path, fuel_name, files_
     fig = helper_functions.remove_empty_axes(fig)
 
     plt.tight_layout()
-    plt.savefig(filepath_to_fuel_properties.parent.joinpath("Figures/Optimal_dataset_fg_distribution_new.tif"), dpi=600)
-    plt.savefig(filepath_to_fuel_properties.parent.joinpath("Output/Optimal_dataset_fg_distribution_new.tif"), dpi=600)
+    plt.savefig(filepath_to_fuel_properties.parent.joinpath("Figures", "Optimal_dataset_fg_distribution_new.tif"), dpi=600)
+    plt.savefig(filepath_to_fuel_properties.parent.joinpath("Output", "Optimal_dataset_fg_distribution_new.tif"), dpi=600)
     plt.close()
 
     # Saving optimal dataset...
     optimal_dataset.sort_index(inplace=True)
-    optimal_dataset.to_csv(filepath_to_fuel_properties.parent.joinpath("Output/Optimal_dataset_FG_fragmentations.csv"), index=None)
+    optimal_dataset.to_csv(filepath_to_fuel_properties.parent.joinpath("Output", "Optimal_dataset_FG_fragmentations.csv"), index=None)
 
     # Generating an excel file containing mixture compositions of each optimal surrogate mixture...
     # Read and combine all CSV files...
     df_list = [pd.read_csv(Path(file)) for file in files_mixtures]  # Read each CSV into a DataFrame...
     combined_df = pd.concat(df_list, ignore_index=True)  # Concatenate them vertically...
     # Save the combined DataFrame into a new CSV file...
-    combined_df.to_csv(filepath_to_fuel_properties.parent.joinpath("Output/combined_wt_fractions_of_mixtures.csv"), index=False)
+    combined_df.to_csv(filepath_to_fuel_properties.parent.joinpath("Output", "combined_wt_fractions_of_mixtures.csv"), index=False)
 
     optimal_mixtures = combined_df[combined_df.mix_id.isin(optimal_dataset['#'])]
-    optimal_mixtures.to_csv(filepath_to_fuel_properties.parent.joinpath("Output/Optimal_dataset_mixture_compositions.csv"), index=None)
+    optimal_mixtures.to_csv(filepath_to_fuel_properties.parent.joinpath("Output", "Optimal_dataset_mixture_compositions.csv"), index=None)
 
     return optimal_dataset, optimal_mixtures
