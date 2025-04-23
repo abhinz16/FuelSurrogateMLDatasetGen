@@ -113,7 +113,7 @@ class Fuel_Analysis:
         fig = helper_functions.remove_empty_axes(fig)
 
         plt.tight_layout()
-        plt.savefig(os.path.join(os.path.dirname(self.fg_prop_path), f"Figures/densityplot_extended_fg_distributions_{num_comp}_component_mixtures.tif"), dpi=300)
+        plt.savefig(os.path.join(os.path.dirname(self.fg_prop_path), "Figures", f"densityplot_extended_fg_distributions_{num_comp}_component_mixtures.tif"), dpi=300)
         plt.close()
 
 def main(num_comps_list, fuel_name, fuel_filepath, fg_prop_path, df):
