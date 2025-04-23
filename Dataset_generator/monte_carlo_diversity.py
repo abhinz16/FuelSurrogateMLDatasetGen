@@ -193,10 +193,10 @@ def main(file_data, filepath_to_fuel_properties, max_iterations=100, n_bins=50):
     axes.spines["left"].set_linewidth(3)
     axes.spines["right"].set_linewidth(3)
 
-    plt.savefig(filepath_to_fuel_properties.parent.joinpath("Figures/Mean_minimum_entropy_vs_number_of_mixtures.tif"), dpi=600)
+    plt.savefig(filepath_to_fuel_properties.parent.joinpath("Figures", "Mean_minimum_entropy_vs_number_of_mixtures.tif"), dpi=600)
     plt.close()
 
     df_data = pd.DataFrame({'Number of mixtures': np.array(no_of_mixtures), 'Mean minimum entropy': np.array(entropy_list)})
-    df_data.to_csv(filepath_to_fuel_properties.parent.joinpath("Number_of_mixtures_vs_mean_minimum_entropy.csv"), index=0)
+    df_data.to_csv(filepath_to_fuel_properties.parent.joinpath("Output", "Number_of_mixtures_vs_mean_minimum_entropy.csv"), index=0)
 
     return df_data
