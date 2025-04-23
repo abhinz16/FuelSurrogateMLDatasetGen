@@ -77,7 +77,7 @@ def summary(file_data, filepath_to_fuel_properties):
 
         plt.get_current_fig_manager().window.showMaximized()
         fig.tight_layout()
-        plt.savefig(filepath_to_fuel_properties.parent.joinpath(f"Figures/{num_comp}-component mixtures_summary.tif"), dpi=600)
+        plt.savefig(filepath_to_fuel_properties.parent.joinpath("Figures", f"{num_comp}-component mixtures_summary.tif"), dpi=600)
         plt.close()
 
 # Entropy based analysis...
@@ -181,7 +181,7 @@ def entropy_calculation(file_data, filepath_to_fuel_properties, fg_prop_path, n_
     plt.get_current_fig_manager().window.showMaximized()
     fig.tight_layout()
 
-    plt.savefig(filepath_to_fuel_properties.parent.joinpath(f"Figures/{num_comp}-component mixtures_entropy.tif"), dpi=600)
+    plt.savefig(filepath_to_fuel_properties.parent.joinpath("Figures", f"{num_comp}-component mixtures_entropy.tif"), dpi=600)
     plt.close()
 
 # PCA analysis...
@@ -382,7 +382,7 @@ def main(filepath_to_fuel_properties, fg_data, fg_prop_path, max_iterations=100,
             df[str(num_comp)+'_mixtures'] = x_list[num][j]
             df[str(num_comp)+'_correlation'] = y_list[num][j]
 
-    df.to_csv(filepath_to_fuel_properties.parent.joinpath("entropy_vs_number_of_mixtures.csv"), index=None)
+    df.to_csv(filepath_to_fuel_properties.parent.joinpath("Output", "entropy_vs_number_of_mixtures.csv"), index=None)
 
     # Plotting...
     fig, ax1 = plt.subplots()
@@ -407,5 +407,5 @@ def main(filepath_to_fuel_properties, fg_data, fg_prop_path, max_iterations=100,
         ax1.legend(prop=font)
 
     plt.tight_layout()
-    plt.savefig(filepath_to_fuel_properties.parent.joinpath("Figures/entropy_vs_number_of_mixtures.tif"), dpi=600)
+    plt.savefig(filepath_to_fuel_properties.parent.joinpath("Figures", "entropy_vs_number_of_mixtures.tif"), dpi=600)
     plt.close()
