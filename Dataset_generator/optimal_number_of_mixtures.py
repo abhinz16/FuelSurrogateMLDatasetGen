@@ -78,7 +78,7 @@ def get_diff(filepath_to_fuel_properties, correlation, entropy):
     plt.pause(1)
 
     plt.tight_layout()
-    plt.savefig(Path(filepath_to_fuel_properties).parent.joinpath("Figures/Optimal_number_of_mixtures.tif"), dpi=600)
+    plt.savefig(Path(filepath_to_fuel_properties).parent.joinpath("Figures", "Optimal_number_of_mixtures.tif"), dpi=600)
 
     return intersect
 
@@ -185,7 +185,7 @@ def main(filepath_to_fuel_properties, correlation, entropy, threshold=0.1, inter
     ax.spines["right"].set_linewidth(3)
 
     plt.tight_layout()
-    plt.savefig(Path(filepath_to_fuel_properties).parent.joinpath("Figures/Optimal_number_of_mixtures.tif"), dpi=600)
+    plt.savefig(Path(filepath_to_fuel_properties).parent.joinpath("Figures", "Optimal_number_of_mixtures.tif"), dpi=600)
     plt.close()
 
     return minimum_no_of_mixtures
