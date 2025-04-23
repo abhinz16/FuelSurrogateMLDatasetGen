@@ -178,7 +178,7 @@ def main(file_data, filepath_to_fuel_properties, max_iterations=100, n_bins=50):
     axes.scatter(no_of_mixtures, entropy_list, s=200, c='r')
     try:
         axes.scatter(np.array(no_of_mixtures)[np.where(np.array(entropy_list)==max(entropy_list))[0][0]], max(entropy_list), s=300, c='g', marker='X')
-    except:
+    except IndexError:
         raise ValueError('Increase number of iterations or mixtures generated.')
     axes.set_xlabel('Number of mixtures', fontsize=30, fontweight="bold")
     axes.set_ylabel('Entropy', fontsize=30, fontweight="bold")
