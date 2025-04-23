@@ -242,10 +242,10 @@ def main(file_data, filepath_to_fuel_properties, max_iterations=10):
     plt.get_current_fig_manager().window.showMaximized()
     plt.tight_layout()
 
-    plt.savefig(filepath_to_fuel_properties.parent.joinpath("Figures/Mean_maximum_distance_correlation_vs_number_of_mixtures.tif"), dpi=600)
+    plt.savefig(filepath_to_fuel_properties.parent.joinpath("Figures", "Mean_maximum_distance_correlation_vs_number_of_mixtures.tif"), dpi=600)
     plt.close()
 
     df_data = pd.DataFrame({'Number of mixtures': np.array(no_of_mixtures), 'Mean maximum correlation': np.array(correlation_list)})
-    df_data.to_csv(filepath_to_fuel_properties.parent.joinpath("Number_of_mixtures_vs_mean_maximum_correlation.csv"), index=0)
+    df_data.to_csv(filepath_to_fuel_properties.parent.joinpath("Output", "Number_of_mixtures_vs_mean_maximum_correlation.csv"), index=0)
 
     return df_data
