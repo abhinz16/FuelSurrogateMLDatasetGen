@@ -257,6 +257,6 @@ def main(filepath_to_fuel_properties, fg_data, max_iterations=100):
             df[str(num_comp)+'_mixtures'] = x_list[num][j]
             df[str(num_comp)+'_correlation'] = y_list[num][j]
 
-    df.to_csv(os.path.join(os.path.dirname(filepath_to_fuel_properties), "distance_correlation_vs_number_of_mixtures.csv"), index=None)
+    df.to_csv(os.path.join(os.path.dirname(filepath_to_fuel_properties), "Output", "distance_correlation_vs_number_of_mixtures.csv"), index=None)
 
     return x_list, y_list
