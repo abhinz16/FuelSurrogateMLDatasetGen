@@ -98,7 +98,7 @@ def combine_fg_data(filenames, fuel_name, fg_prop_path, PC_data, user_name):
         df.rename(columns={old_col: fg_id}, inplace=True)
 
     df2 = df.copy()
-    df2.to_csv(os.path.join(os.path.dirname(fg_prop_path),'combined_fgs_of_mixtures.csv'), index=None)
+    df2.to_csv(os.path.join(os.path.dirname(fg_prop_path),'Output', 'combined_fgs_of_mixtures.csv'), index=None)
 
     df.drop(columns=['Filename', 'Date', 'user_id'], inplace=True)
     df.fillna(value=0, inplace=True)
@@ -149,7 +149,7 @@ def plotting_correlation(filepath_to_fuel_properties, fg_data, x_list, y_list):
         ax1.legend(prop=font)
 
     plt.tight_layout()
-    plt.savefig(os.path.join(os.path.dirname(filepath_to_fuel_properties), "Figures/distance_correlation_vs_number_of_mixtures.tif"), dpi=600)
+    plt.savefig(os.path.join(os.path.dirname(filepath_to_fuel_properties), "Figures", "distance_correlation_vs_number_of_mixtures.tif"), dpi=600)
     plt.close()
 
 def remove_empty_axes(fig):
