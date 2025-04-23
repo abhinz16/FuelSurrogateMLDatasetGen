@@ -29,6 +29,7 @@ PROVIDE THE UNIFAC FUNCTIONAL GROUP COMPOSITIONS OF FUEL IN 'Fuel_props.csv' FIL
 # Import libraries...
 import vispy; import logging; vispy.use('pyqt5'); vispy_logger = logging.getLogger('vispy'); vispy_logger.setLevel(logging.CRITICAL)
 import sys
+from config import CONFIG
 import numpy as np
 import pandas as pd
 import surrogate_generator
@@ -45,7 +46,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Provide the location to store the data...
-folderpath = ""
+folderpath = CONFIG["folderpath"]
 sys.path.append(folderpath)
 
 if __name__=="__main__":
@@ -66,7 +67,7 @@ if __name__=="__main__":
         raise Exception('This code has only been tested on scipy version 1.12.0 or lower. Please install scipy version 1.12.0 or lower...')
     else:
         # Provide user name here...
-        user_name = 'akayam2'
+        user_name = CONFIG["user_name"]
 
         # Filepath to where the files with information on the fuel properties and component properties are stored...
         filepath_to_fuel_properties = os.path.join(folderpath, "Fuel_props.csv")
@@ -83,31 +84,34 @@ if __name__=="__main__":
         # Name of the target fuel...
         fuel_details = pd.read_csv(filepath_to_fuel_properties, header=0, index_col=0)
         fuel_name = str(fuel_details.index[0]) # The target fuel should be in 'filepath_to_fuel_properties'...
+        
         # Number of components to be in each surrogate mixture. Provide number of components in a list...
-        num_components = [1,2,3,4,5,6]
+        num_components = CONFIG["num_components"]
+        
         # Provide the threshold below which the component is considered as trace component...
-        threshold = 0.01
+        threshold = CONFIG["threshold"]
 
         # Provide the desired constraints...
-        DCN_constr = False
-        MW_constr = False
+        DCN_constr = CONFIG["DCN_constr"]
+        MW_constr = bool(CONFIG["MW_constr"])
         family_restriction = False
 
         # Provide the maximum number of iterations...
-        max_iter = 10000
+        max_iter = CONFIG["max_iter"]
+        
         # Provide the number of mixtures that the prgram should try to find for each n-component category mixtures...
-        max_mixtures = 50
+        max_mixtures = CONFIG["max_mixtures"]
 
         # Statistical analysis paramters...
         # Number of constant bins for entropy calculations...
-        n_bins = 50
+        n_bins = CONFIG["n_bins"]
         # Correlation and entropy monte-carlo analysis for each n-component category...
-        max_iterations_each = 500
+        max_iterations_each = CONFIG["max_iterations_each"]
         # Correlation and entropy monte-carlo analysis irrespective of n-component category...
-        max_iterations_full = 500
+        max_iterations_full = CONFIG["max_iterations_full"]
 
         # To find optimal dataset...
-        max_iterations_optimal = 500
+        max_iterations_optimal = CONFIG["max_iterations_optimal"]
 
         print('\n\nFragmentation of pure components...\n')
         FG_class = fg_fragmenter.execute(filepath_to_PC_info, fg_prop_path, filepath_to_fuel_properties)
