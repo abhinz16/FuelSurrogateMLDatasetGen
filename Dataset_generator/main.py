@@ -186,7 +186,7 @@ if __name__=="__main__":
         while not suitable_threshold:
             try:
                 """Enter the threshold based on the difference plot. Keep trying new ones if no intersection found.
-                     Refer the plot obtained for the precious line to find sutiable threshold..."""
+                     Refer the plot generated to find sutiable threshold..."""
                 threshold = float(input("\nEnter threshold for finding minimum number of mixtures for optimal dataset: "))
                 minimum_no_of_mixtures = optimal_number_of_mixtures.main(filepath_to_fuel_properties, correlation_data, entropy_data, threshold, intersect)
                 suitable_threshold = True
