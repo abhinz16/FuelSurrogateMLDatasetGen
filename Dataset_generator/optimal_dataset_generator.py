@@ -316,7 +316,6 @@ def main(file_data, filepath_to_fuel_properties, fg_prop_path, fuel_name, files_
 
     plt.tight_layout()
     plt.savefig(filepath_to_fuel_properties.parent.joinpath("Figures", "Optimal_dataset_fg_distribution_new.tif"), dpi=600)
-    plt.savefig(filepath_to_fuel_properties.parent.joinpath("Output", "Optimal_dataset_fg_distribution_new.tif"), dpi=600)
     plt.close()
 
     # Saving optimal dataset...
