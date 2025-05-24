@@ -75,6 +75,7 @@ def get_diff(filepath_to_fuel_properties, correlation, entropy):
     ax.spines["top"].set_linewidth(3)
     ax.spines["left"].set_linewidth(3)
     ax.spines["right"].set_linewidth(3)
+    plt.show()
     plt.pause(1)
 
     plt.tight_layout()
